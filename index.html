@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prog Mltml</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Josefin+Sans" rel="stylesheet">
+</head>
+<body>
+    <header class="page-header">
+        <h1 class="page-title">Chocolate Box preview</h1>
+        <video id="video-header" autoplay loop>
+            <source src="chocolateAd.mp4" type="video/mp4">
+            <source src="chocolateAd.webm" type="video/webm">
+        </video>
+        <img src="altCompressed.PNG" id="image-header" alt="Chocolate Box Preview">
+        <div class="page-header-overlay">
+            <div class="title-overlay">
+                <h2 class="header-title">Ptasie mleczko</h2>
+                <p class="header-description">Confezione di cioccolatini accuratamente selezionati, ideati per dai veri maestri del cioccolato per avvolgere tutti i vostri sensi </p>
+            </div>
+        </div>
+        <a href="#intro" id="introSectionNav" title="FeatureSection">
+        </a>
+    </header>
+    <main class="page-content">
+        <section id="intro" class="feature-showcase">
+            <header class="section-header">
+                <h3 class="section-title">Caratteristiche</h3>
+                <p class="section-subtitle">
+                    Sperimenta il cioccolato prodotto secondo la ricetta tradizionale, tramandata da padre in figlio ed arricchita dalle moderne tecniche di lavorazione dai maestri cioccolatieri della compagnia Wedel&copy; fondata nel 1936.
+                </p>
+            </header>
+            <ul class="feature-list">
+                <li class="leftFeatures wow slideInRight">
+                    <img src="checked.svg" class="wow rollIn center" alt="checkFeature">
+                    <p class="feature-description">Ricetta tradizionale</p>
+                </li>
+                <li class="rightFeatures wow slideInLeft">
+                    <p class="feature-description">Senza glutine</p>
+                    <img src="checked.svg" alt="checkFeature">
+                </li>
+                <li class="leftFeatures wow bounceInRight center">
+                    <img src="checked.svg" class="wow rollIn center" alt="checkFeature">
+                    <p class="feature-description">Cioccolato finissimo</p>
+                </li>
+                <li class="rightFeatures wow slideInLeft">
+                    <p class="feature-description">Ripieno di marshmallow</p>
+                    <img src="checked.svg" alt="checkFeature">
+                </li>
+                <li class="leftFeatures wow slideInRight">
+                    <img src="checked.svg" alt="checkFeature">
+                    <p class="feature-description">Ingredienti di alta qualità</p>
+                </li>
+            </ul>
+        </section>
+        <section id="overview" class="productOverview">
+            <div class="showProduct">
+                <a id="boxViewer" class="button" href="#boxPopup">Visualizza il Prodotto</a>
+            </div>
+            <div id="boxPopup" class="overlay">
+                <div class="popup">
+                    <h3>Visualizzazione interattiva a 360° del prodotto finale</h3>
+                    <a class="close" href="#overview">&times;</a>
+                    <div class="popupContent">
+                        <iframe id="myIframe" src="" style="width: 100%; height: 600px; border: 0; overflow: hidden;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">&copy; Lukasz Szczygiel 2018 <br>Esame di Produzione Multimediale</footer>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <script>
+        window.onload = function(){
+            var boxViewer = document.getElementById('boxViewer');
+            boxViewer.addEventListener("click", function () {
+                var iframe = document.getElementById('myIframe');
+                src = iframe.src;
+                iframe.src = 'chocolateBoxFinal.html';
+            });
+        }
+    </script>
+
+</body>
+</html>
