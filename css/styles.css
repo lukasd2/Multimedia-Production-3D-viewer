@@ -1,0 +1,428 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-family: 'Courgette', cursive;
+}
+
+.page-header .page-title {
+    display: none;
+}
+
+.header-title::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    padding-top: 25px;
+    border-bottom: 3px solid #cfdef3;
+}
+
+.page-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 5px 0 rgba(50, 50, 50, 0.9);
+}
+
+.page-header #image-header {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.page-header #video-header {
+    width: 100%;
+    height: 100%;
+}
+
+.page-header .page-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgba(0, 0, 0, 0.9));
+}
+
+.page-header-overlay {
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+.page-header .title-overlay {
+    position: relative;
+    top: 50%;
+    width: 100%;
+    background: rgba(54, 25, 25, .4);
+    box-shadow: 0 5px 5px 0 rgba(50, 50, 50, 0.9);
+    text-align: center;
+    padding: 25px 0px 25px 0px;
+}
+
+.header-title {
+    font-family: 'Josefin Sans', sans-serif;
+    width:100%;
+    color:white;
+    text-shadow:0 2px 1px black;
+    text-align:center;
+    font-size:2.5em;
+    letter-spacing: 4px;
+    text-transform:uppercase;
+    margin: 0;
+    padding-top: 30px;
+}
+
+.header-description {
+    width:60%;
+    margin:0 auto;
+    text-align:center;
+    text-shadow: 0 1px 1px black;
+    color: #ffffff;
+    opacity:.8;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 1.5em;
+}
+
+#introSectionNav {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-image: url('../thin-arrowheads-pointing-down.svg');
+    background-size: cover;
+}
+
+.page-content {
+    color: #292F33;
+}
+
+.section-header {
+    width: 50%;
+    text-align: center;
+}
+
+.section-header .section-title {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 50px 0;
+}
+
+.section-header .section-title::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+    padding-top: 25px;
+    border-bottom: 3px solid #6ac259;
+}
+
+.section-header .section-subtitle {
+    margin: 0;
+    font-size: 1.5em;
+    padding-bottom: 50px;
+    line-height: 1.5;
+}
+
+.feature-showcase {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(to left, #e0eafc, #cfdef3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 5px 5px 0 rgba(50, 50, 50, 0.6);
+}
+
+.feature-list::before {
+    content: '';
+    position: absolute;
+    background-color: #6ac259;
+    height: 580px;
+    width: 10px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 320px;
+    border-radius: 5px;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 65%;
+    list-style-type: none;
+    padding: 0;
+}
+
+.feature-list li {
+    display: flex;
+}
+
+.feature-list li img {
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+    margin: 15px;
+    transition: transform 300ms ease-in-out;
+}
+
+.feature-list li p {
+    margin: 0;
+    font-size: 1.6em;
+    line-height: 140px;
+}
+
+.feature-list .leftFeatures {
+    align-self: flex-end;
+}
+
+.feature-list .rightFeatures {
+    align-self: flex-start;
+}
+
+.feature-list img:hover {
+    transform: rotate(360deg);
+}
+
+.productOverview .showProduct {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+}
+
+.button {
+    font-size: 1.6em;
+    padding: 30px;
+    margin: 130px 0;
+    color: #292F33;
+    border: 2px solid #06D85F;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.button:hover {
+    color: #fff;
+    background: #06D85F;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #cfdef3;
+    border-radius: 5px;
+    width: 75%;
+    position: relative;
+    transition: all 1s ease-in-out;
+
+}
+
+.popup h3 {
+    text-align: center;
+    font-family: "Josefin Sans";
+    margin: 0;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 15px 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #666666;
+
+}
+.popup .close {
+    position: absolute;
+    text-shadow: 2px 2px 2px #666666;
+    top: 25px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+}
+.popup .close:hover {
+    color: #06D85F;
+}
+.popup .popupContent {
+    overflow: auto;
+}
+
+.page-footer {
+    display: flex;
+    justify-content: center;
+    padding: 45px 0;
+    font-size: 1.2em;
+    font-family: "Josefin Sans";
+    line-height: 35px;
+    color: #ffffff;
+    background: linear-gradient(to bottom, #2c3e50, #4ca1af); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 5px 5px 5px 5px rgba(50, 50, 50, 0.6);
+}
+
+@media only screen and (max-width: 81.25em) {
+    #image-header {
+        display: block !important;
+    }
+
+    .page-header .header-title {
+        font-size: 1.5em;
+    }
+
+    .page-header .header-description {
+        font-size: 1.2em;
+    }
+
+    .page-header .title-overlay {
+        top: 0;
+    }
+
+    #introSectionNav {
+        height: 30px;
+        width: 30px;
+    }
+
+    .section-header {
+        width: 100%;
+    }
+
+    .section-header .section-subtitle {
+        padding: 0 25px;
+        padding-bottom: 20px;
+    }
+
+    .feature-list::before {
+        display: none;
+    }
+
+    .feature-list {
+        width: 95%;
+        margin-bottom: 25px;
+    }
+
+    .feature-list .leftFeatures {
+        align-self: center;
+    }
+
+    .feature-list .rightFeatures {
+        align-self: center;
+    }
+
+    .feature-list li img {
+        cursor: pointer;
+        height: 50px;
+        width: 50px;
+        margin: 8px;
+        transition: transform 300ms ease-in-out;
+    }
+
+    .feature-list li p {
+        margin: 0;
+        font-size: 1.2em;
+        line-height: 70px;
+    }
+
+    .popup {
+        margin: 0;
+        padding: 0;
+        bottom: 0;
+        width: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+
+    .popup h3 {
+        display: none;
+    }
+
+    .popup .close {
+        position: relative;
+        display: block;
+        text-align: center;
+        top: 4px;
+        right: 0;
+    }
+
+    .page-footer {
+        font-size: 1em;
+    }
+
+    #video-header {       
+        display: none;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .page-header .title-overlay {
+        top: 0;
+    }
+
+    .page-header .header-title {
+        padding-top: 0;
+    }
+
+    .page-header .header-description {
+        padding-top: 5px;
+        font-size: 0.8em;
+        width: 95%;
+    }
+
+    #introSectionNav {
+        bottom: -10px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .section-header .section-title {
+        font-size: 2em;
+    }
+    .section-header .section-subtitle {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    .showProduct .button {
+        font-size: 1em;
+        padding: 15px;
+        margin: 80px 0;
+    }
+
+    #video-header {       
+        display: none;
+    }
+}
