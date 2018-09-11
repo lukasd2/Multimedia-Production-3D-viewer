@@ -3,7 +3,7 @@
 Multimedia Production - showcase of an example product through interactive 360° - 3D viewer.
 
 ------------
-###### Created on: 01/2018 / Live version: https://lukasd2.github.io/Website-project-JourneyBelow-v1.0/
+###### Created on: 01/2018 / Live version: https://lukasd2.github.io/Multimedia-Production-3D-viewer/
 ------------
 ### Technologies/features:
 
